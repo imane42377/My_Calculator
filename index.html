@@ -1,0 +1,43 @@
+<link rel="Stylesheet" href="CalculatorDesign.css">
+<body>
+    <div class="ranger">
+    <input id ="inputAff" readonly placeholder="Results..."><br>
+    <div class="box">
+   <button onclick="btn_Clear()">CL</button>
+   <button onclick="btn_Result()">=</button>
+   <button class="btn_values" onclick="prepareDisplay('*')">x</button>
+   <button class="btn_values" onclick="prepareDisplay('/')">÷</button>
+   <button class="btn_values" onclick="prepareDisplay('1')">1</button>
+   <button class="btn_values" onclick="prepareDisplay('2')">2</button>
+   <button class="btn_values" onclick="prepareDisplay('3')">3</button>
+   <button class="btn_values" onclick="prepareDisplay('+')">+</button>
+   <button class="btn_values" onclick="prepareDisplay('4')">4</button>
+   <button class="btn_values" onclick="prepareDisplay('5')">5</button>
+   <button class="btn_values" onclick="prepareDisplay('6')">6</button>
+   <button class="btn_values" onclick="prepareDisplay('-')">-</button>
+   <button class="btn_values" onclick="prepareDisplay('7')">7</button>
+   <button class="btn_values" onclick="prepareDisplay('8')">8</button>
+   <button class="btn_values" onclick="prepareDisplay('9')">9</button>
+   <button class="btn_values" onclick="prepareDisplay('.')">.</button>
+   <button class="btn_values" onclick="prepareDisplay('0')">0</button>
+   </div>
+</div>
+</body>
+    <script>
+        try{        
+Aff = document.getElementById("inputAff");
+
+function prepareDisplay(fetch){
+     Aff.value += fetch;
+}
+function btn_Clear(){
+    Aff.value="";
+}
+function btn_Result(){
+    Aff.value=eval(Aff.value);
+}
+}
+catch(Error){
+    Aff.value="Error...";
+}
+    </script>
